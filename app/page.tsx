@@ -42,7 +42,7 @@ export default function LandingPage() {
       {/* Content */}
       <div className="relative z-20 text-center p-6 max-w-4xl">
         <Image
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/formanovo-FTgyN7IoicAinzWICpYYpR46j4aj8i.png"
+          src="https://formanovodesign.b-cdn.net/formanovo.png"
           alt="Formanovo Logo"
           width={150}
           height={150}
