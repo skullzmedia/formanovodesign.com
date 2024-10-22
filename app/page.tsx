@@ -1,5 +1,4 @@
 "use client"
-
 import { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import { Phone, Mail, MessageCircle } from 'lucide-react'
@@ -7,22 +6,19 @@ import { Phone, Mail, MessageCircle } from 'lucide-react'
 const LandingPage = () => {
   const [iframeLoaded, setIframeLoaded] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
-  const iframeRef = useRef(null);
+  const iframeRef = useRef<HTMLIFrameElement>(null);
 
   useEffect(() => {
-    const handleIframeLoad = () => {
-      setIframeLoaded(true);
-    };
+    const iframe = iframeRef.current;
+    
+    if (iframe) {
+      const handleIframeLoad = () => {
+        setIframeLoaded(true);
+      };
 
-    if (iframeRef.current) {
-      iframeRef.current.addEventListener('load', handleIframeLoad);
+      iframe.addEventListener('load', handleIframeLoad);
+      return () => iframe.removeEventListener('load', handleIframeLoad);
     }
-
-    return () => {
-      if (iframeRef.current) {
-        iframeRef.current.removeEventListener('load', handleIframeLoad);
-      }
-    };
   }, []);
 
   const handleImageLoad = () => {
