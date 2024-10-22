@@ -33,7 +33,7 @@ const LandingPage = () => {
           ref={iframeRef}
           src="https://iframe.mediadelivery.net/embed/329974/a3a87ad9-b340-47f8-8aa1-f47c8ffa386d?autoplay=true&loop=true&muted=true&preload=true&responsive=true"
           className={`absolute top-0 left-0 w-full h-full transition-opacity duration-1000 ${
-            iframeLoaded ? 'opacity-30' : 'opacity-0'
+            iframeLoaded ? 'opacity-30' : 'opacity-100'
           }`}
           allow="autoplay; fullscreen"
           allowFullScreen
