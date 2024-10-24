@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
-import Image from 'next/image'
 import { Phone, Mail, MessageCircle } from 'lucide-react'
 
 const LandingPage = () => {
@@ -44,34 +43,25 @@ const LandingPage = () => {
 
       {/* Content */}
       <div className="relative z-20 text-center p-6 max-w-4xl w-full">
-        {/* Launching Soon */}
-        <div className="mb-4 px-2 py-1 bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg rounded-md inline-block">
-          <span className="text-xs font-medium text-white">Launching Soon</span>
-        </div>
-
         {/* Logo */}
-        <div className="w-40 h-40 mx-auto mb-12 relative flex items-center justify-center">
+        <div className="w-auto h-20 mx-auto mb-12 relative flex items-center justify-center">
           <img
-            src="https://formanovodesign.b-cdn.net/formanovo.png"
-            alt="Formanovo Logo"
-            className={`max-w-full max-h-full object-contain transition-opacity duration-500 ${
-              imageLoaded ? 'opacity-100' : 'opacity-0'
-            }`}
-            onLoad={handleImageLoad}
+            src="./black-bg-formanovo.png"
+            alt="Formanovo Design Studio Logo"
+            className="h-full w-auto"
           />
         </div>
         
-        {/* Headings */}
-        <h1 className="text-4xl sm:text-5xl font-bold mb-4 text-white">
-          Innovating Personalised
+        {/* Headings - Combined into one line */}
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-white">
+          Innovating Personalised Products and Solutions
         </h1>
-        <h2 className="text-2xl sm:text-3xl mb-12 text-gray-300">
-          Products and Solutions
-        </h2>
+        
+        {/* Launching Soon text */}
+        <p className="text-xl mb-12 text-white">Launching Soon</p>
         
         {/* CTA Section */}
         <div className="mb-16">
-          <p className="text-xl mb-6">Taking Orders</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="https://wa.me/917391086524"
@@ -81,22 +71,6 @@ const LandingPage = () => {
               aria-label="Order Now via WhatsApp"
             >
               Order Now
-            </a>
-            <a
-              href="tel:+917391086524"
-              className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 bg-white bg-opacity-20 text-white font-semibold rounded-full hover:bg-opacity-30 transition-all duration-300 hover:scale-105"
-              aria-label="Call Us"
-            >
-              <Phone className="w-4 h-4 mr-2" />
-              Call
-            </a>
-            <a
-              href="mailto:iraj.shet@formanovodesign.com"
-              className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 bg-white bg-opacity-20 text-white font-semibold rounded-full hover:bg-opacity-30 transition-all duration-300 hover:scale-105"
-              aria-label="Email Us"
-            >
-              <Mail className="w-4 h-4 mr-2" />
-              Email
             </a>
           </div>
         </div>
@@ -109,7 +83,7 @@ const LandingPage = () => {
           </div>
           <div className="flex items-center justify-center gap-2">
             <Mail className="text-gray-400 w-6 h-6" />
-            <span className="text-gray-300 break-all">iraj.shet@formanovodesign.com</span>
+            <span className="text-gray-300">iraj.sheth@formanovodesign.com</span>
           </div>
         </div>
       </div>
@@ -120,17 +94,6 @@ const LandingPage = () => {
           &copy; 2023 Formanovo. All rights reserved.
         </div>
       </footer>
-
-      {/* Floating WhatsApp Button */}
-      <a
-        href="https://wa.me/917391086524"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-4 right-4 sm:bottom-8 sm:right-8 bg-green-500 text-white p-3 sm:p-4 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 hover:scale-110 z-30 flex items-center justify-center"
-        aria-label="Contact us on WhatsApp"
-      >
-        <MessageCircle className="w-6 h-6 sm:w-8 sm:h-8" />
-      </a>
     </div>
   );
 };
