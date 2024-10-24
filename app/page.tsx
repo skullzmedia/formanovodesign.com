@@ -49,16 +49,17 @@ const LandingPage = () => {
             src="./black-bg-formanovo.png"
             alt="Formanovo Design Studio Logo"
             className="h-full w-auto"
+            onLoad={handleImageLoad}
           />
         </div>
         
-        {/* Headings - Combined into one line */}
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-white">
-          Innovating Personalised Products and Solutions
+        {/* Headings - Adjusted for two lines on smaller screens */}
+        <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 text-white leading-tight">
+          Innovating Personalised<br />Products and Solutions
         </h1>
         
-        {/* Launching Soon text */}
-        <p className="text-xl mb-12 text-white">Launching Soon</p>
+        {/* Launching Soon text - Improved styling */}
+        <p className="text-xl mb-12 font-bold text-purple-300">Launching Soon</p>
         
         {/* CTA Section */}
         <div className="mb-16">
